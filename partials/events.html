@@ -1,0 +1,29 @@
+<style>
+
+.month,.date-number{
+		font-size:1em !important;
+}
+body{
+background:white;
+}
+</style>
+<section class="events" ng-controller="eventsController">
+<h1 class="section-heading text-highlight"><span class="line">Events</span></h1>
+<div class="section-content">
+<div class="event-item" ng-repeat="eventitem in eventitems">
+<p class="date-label">
+<span class="month">APR</span>
+<span class="date-number">10</span>
+</p>
+<div class="details">
+<h1 class="title" ng-bind-html="eventitem.name"></h2>
+<p class="time"><i class="fa fa-clock-o"></i>{{eventitem.start_time}} - {{eventitem.end_time}}</p>
+<p class="location"><i class="fa fa-map-marker" ng-bind-html="eventitem.location"></i></p>                            
+</div><!--//details-->
+</div><!--//section-content-->
+
+
+
+
+</section><!--//events-->
+

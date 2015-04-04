@@ -1,0 +1,24 @@
+
+<section class="testimonials" ng-controller="alumniController">
+                        <h1 class="section-heading text-highlight"><span class="line">Alumni</span></h1>
+                        <div class="carousel-controls">
+                            <a class="prev" href="#testimonials-carousel" data-slide="prev"><i class="fa fa-caret-left"></i></a>
+                            <a class="next" href="#testimonials-carousel" data-slide="next"><i class="fa fa-caret-right"></i></a>
+                        </div><!--//carousel-controls-->
+                        <div class="section-content">
+                            <div id="testimonials-carousel" class="testimonials-carousel carousel slide">
+                                <div class="carousel-inner">
+                                    <div class={{alum.type}} ng-repeat="alum in alumni">
+                                        <blockquote class="quote">                                  
+                                            <p><i class="fa fa-quote-left"></i>{{alum.quote}}</p>
+                                        </blockquote>                
+                                        <div class="row">
+                                            <p class="people col-md-8 col-sm-3 col-xs-8"><span class="name">{{alum.name}}</span><br /><span class="title">{{alum.job}}</span></p>
+                                            <img class="profile col-md-4 pull-right" src={{alum.image}}  alt="" />
+                                        </div>                               
+                                    </div><!--//item-->
+                                    
+                                </div><!--//carousel-inner-->
+                            </div><!--//testimonials-carousel-->
+                        </div><!--//section-content-->
+                    </section><!--//testimonials-->

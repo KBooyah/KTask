@@ -1,0 +1,81 @@
+<style>
+.links{
+width:100%;
+position:fixed;
+bottom:0px;
+}
+.links li a{
+	display:block;
+	float:left;
+	padding:5px;
+	color:black;
+	font-size:1.5em !important;
+	margin-bottom:5px;
+	margin-right:20px;
+	
+}
+
+.links a:hover{
+	background:gold;
+	color:black;
+}
+.links a:focus{
+	
+	color:black;
+	text-decoration: none;
+}
+
+.cube{
+	position:relative;
+	margin-left:0%;
+}
+ul li{
+	margin-top:5px;
+	float:left;
+	display: block;
+	list-style:none;
+}
+i.fa.fa-close{
+	color:red;
+	padding:6px;
+}
+.close:hover{
+	color:white;
+	background:white;
+	border:3px solid black;
+}
+.cube{
+	margin-left:1%;
+}
+</style>        
+<div  ng-controller="linksController">   
+
+                <section class="links">
+                        <div class="section-content">
+                          <ul>
+                          <li  ng-repeat="link in links">  <a href="{{link.linkTo}}"><i class="fa fa-cog"></i>{{link.name}}</a></li>
+                      </ul>
+                            <br>
+                            
+                        </div>
+                    </section>
+
+  </div>
+
+<script>
+
+$(document).ready(function(){
+$(".links").hide();
+
+$('html,body').scroll(function(){
+
+if($(this).scrollTop()>0)
+$(".links").fadeIn("100");
+else
+$(".links").fadeOut("100");
+
+});
+});
+
+</script>
+

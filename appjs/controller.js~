@@ -1,0 +1,977 @@
+var myApp= angular.module('myApp',[]);
+angular.module('myAppcontrollers',['ui.bootstrap'])
+    .controller('navController',function($scope,$routeParams,getService,$rootScope){
+
+      $scope.navItems = ["RESEARCH","DEPARTMENTS","COURSES","ADMISSIONS","CAMPUS TOUR","LOGIN/SIGN UP"];  
+      $scope.item="hello";
+/*
+      $scope.eventClick =function(evname){
+        console.log("here");
+            $(".bList").fadeIn();
+            $(".tab-section").fadeIn();
+           $(".event-title").fadeIn().animate({'line-height':"15"});
+           $(".flip-container").fadeTo("slow",0.3);
+            $scope.title=evname;
+        };
+  */  
+
+    })
+
+
+    .controller('updates',function($scope,$routeParams,getService,$rootScope){
+
+
+
+    })
+
+        /**********************************************/
+
+    .controller('game',function($scope,$routeParams,getService,$rootScope){
+
+    })
+
+         /**********************************************/
+
+    .controller('rules',function($scope,$routeParams,getService,$rootScope){
+
+    })
+
+            /**********************************************/
+
+    .controller('clues',function($scope,$routeParams,getService,$rootScope){
+
+    })
+
+            /**********************************************/
+
+    .controller('leaderBoard',function($scope,$routeParams,getService,$rootScope){
+
+    })
+
+            /**********************************************/
+
+    .controller('forum',function($scope,$routeParams,getService,$rootScope){
+
+    })
+
+            /**********************************************/
+
+
+    .controller('contact',function($scope,$routeParams,getService,$rootScope){
+
+    })
+
+            /*********************************************/
+
+    .controller('join',function($scope,$routeParams,getService,$rootScope){
+        $scope.userProfile={};
+
+        $scope.userProfile.role='sherlock';
+        console.log($scope.userProfile.role);
+    })
+    .controller('eventNameController',function($scope,$routeParams,getService,$rootScope){
+
+        $scope.events = [
+
+          {
+
+
+            category: 'coding',
+            name: ['Reverse Coding', 'DB Mania', 'Random Coding Event 1', 'RCE 2'],
+            image:'images/'
+        },
+            {
+
+
+                category: 'coding',
+                name: ['Reverse Coding', 'DB Mania', 'Random Coding Event 1', 'RCE 2'],
+                image:'images/'
+            },
+
+
+            {
+
+
+                category: 'coding',
+                name: ['Reverse Coding', 'DB Mania', 'Random Coding Event 1', 'RCE 2'],
+                image:'images/'
+            },
+            {
+
+
+                category: 'coding',
+                name: ['Reverse Coding', 'DB Mania', 'Random Coding Event 1', 'RCE 2'],
+                image:'images/'
+            },
+            {
+
+
+                category: 'coding',
+                name: ['Reverse Coding', 'DB Mania', 'Random Coding Event 1', 'RCE 2'],
+                image:'images/'
+            },
+            {
+
+
+                category: 'coding',
+                name: ['Reverse Coding', 'DB Mania', 'Random Coding Event 1', 'RCE 2'],
+                image:'images/'
+            },
+
+        ];
+
+        $scope.eventClick =function(evname){
+        console.log("here");
+            $(".bList").fadeIn();
+            $(".tab-section").fadeIn();
+           $(".event-title").fadeIn().animate({'line-height':"15"});
+           $(".flip-container").fadeTo("slow",0.3);
+            $scope.title=evname;
+        };
+
+        $scope.eventHover = function(){
+
+            $(".flip-container").mouseenter(function(){
+              //  alert("hey");
+                $(".flip-container").find(".flipper").removeClass("flip-me");
+                $(this).find(".flipper").addClass("flip-me");
+
+            });
+
+
+        };
+
+
+    })
+.controller('workshopController',function($scope,$routeParams,getService,$rootScope){
+
+        $scope.workshops1 = [
+            {
+                name:'Fun Workshop1'
+            },
+            {
+              name:
+                  'Fun Workshop 2'
+            },
+            {
+                name: 'Fun Workshop3'
+            },
+
+        ];
+        $scope.workshops2 = [
+            {
+                name:'Fun Workshop 4'
+            },
+            {
+                name:'Fun Workshop 5'
+            }
+        ];
+
+        //$(".info-tab").fadeOut();
+
+
+        $scope.eventClick =function(wkname){
+            console.log("here");
+            $(".bListw").fadeIn();
+            $(".tab-sectionw").fadeIn();
+       //     $(".event-title").fadeIn().animate({'line-height':"15"});
+     //       $(".flip-container").fadeTo("slow",0.3);
+           // $scope.title=wkname;
+        };
+
+
+    }).controller('menuController',function($scope,$routeParams,getService,$rootScope){
+
+        $scope.menu = [
+            {
+                name:'Abacus',
+                status:'active',
+                linker:'#carousel-wrapper'
+
+            },
+            {
+                name:'Events',
+                status:'',
+
+                linker:'#who-we-are'
+            },
+            {
+                name:'Workshops',
+                status:'',
+                linker:'#cause-list'
+            },
+            {
+                name:'Contacts',
+                status:'',
+                linker:'#our-member'
+            },
+            {
+                name:'Sponsors',
+                status:'',
+                linker:'#photo-gallery'
+            },
+
+            {
+                name:'Sign Up!',
+                status:'',
+                linker:'#contact'
+            }
+        ];
+
+
+
+
+
+    }).controller('CarouselController',function($scope,$routeParams,getService,$rootScope) {
+
+        $scope.slideIndex = [{
+            index: '0',
+            status: 'active'
+        },
+            {
+                index: '1',
+                status: ''
+            },
+
+            {
+                index: '2',
+                status: ''
+            },
+            {
+                index: '3',
+                status: ''
+            }];
+
+        $scope.carousel = [{
+
+            h1: 'CEG',
+            contents: 'Some awesome stuff about CEG',
+            image: '1.jpg',
+            class: 'item active'
+        },
+
+            {
+                h1: 'Abacus',
+                contents: 'Cool stuff about Abacus',
+                image: '2.jpg',
+                class: 'item'
+
+            },
+            {
+                h1: 'More stuff',
+                contents: 'More stuff',
+                image: '3.jpg',
+                class: 'item'
+            },
+            {
+                h1: 'More stuff',
+                contents: 'More stuff',
+                image: '4.jpg',
+                class: 'item'
+            }
+
+
+
+        ];
+
+        $scope.selectActive = function(index_){
+            for(var i=0;i<4;i++) {
+                    $scope.slideIndex[i].status='';
+                    $scope.carousel[i].class='item';
+
+            }
+            $scope.slideIndex[index_].status='active';
+            $scope.carousel[index_].class='item active';
+           // console.log(index_+" active?"+$scope.slideIndex[index_].status)
+            };
+
+    }).controller('recentPostController',function($scope,$routeParams,getService,$rootScope){
+
+        //dates
+        $scope.slideIndex1 = [{
+            index: '0',
+            status: 'active'
+        },
+            {
+                index: '1',
+                status: ''
+            },
+
+            {
+                index: '2',
+                status: ''
+            } ];
+
+        //updates
+        $scope.slideIndex = [{
+            index: '0',
+            status: 'active'
+        },
+            {
+                index: '1',
+                status: ''
+            },
+
+            {
+                index: '2',
+                status: ''
+            } ];
+
+
+        $scope.carousel1 = [
+            {
+
+                class: 'item active',
+                updates: [{
+
+                    h1: 'Active Workshops!',
+                    contents: 'Some awesome stuff about CEG',
+                    image: '1.jpg',
+                    month: 'Aug',
+                    date: '01',
+                    fromTime: '10:00 am',
+                    toTime: '12:00 pm'
+                },
+
+                    {
+
+                        h1: 'Events UP!',
+                        contents: 'Some awesome stuff about CEG',
+                        image: '1.jpg',
+                        class: 'item',
+                        month: 'Aug',
+                        date: '01',
+                        fromTime: '10:00 am',
+                        toTime: '12:00 pm'
+                    },
+
+                    {
+
+                        h1: 'GL Up!',
+                        contents: 'Some awesome stuff about CEG',
+                        image: '1.jpg',
+                        class: 'item',
+                        month: 'Aug',
+                        date: '01',
+                        fromTime: '10:00 am',
+                        toTime: '12:00 pm'
+                    },
+                    {
+
+                        h1: 'ROS beckons',
+                        contents: 'Some awesome stuff about CEG',
+                        image: '1.jpg',
+                        class: 'item',
+                        month: 'Aug',
+                        date: '01',
+                        fromTime: '10:00 am',
+                        toTime: '12:00 pm'
+                    }]
+            },
+
+
+            {
+
+                class: 'item',
+                updates: [{
+
+                    h1: 'Register for the Workshop!',
+                    contents: 'Some awesome stuff about CEG',
+                    image: '1.jpg',
+                    month: 'Aug',
+                    date: '01',
+                    fromTime: '10:00 am',
+                    toTime: '12:00 pm'
+                },
+
+                    {
+
+                        h1: 'Events Inactive!',
+                        contents: 'Some awesome stuff about CEG',
+                        image: '1.jpg',
+                        class: 'item',
+                        month: 'Aug',
+                        date: '01',
+                        fromTime: '10:00 am',
+                        toTime: '12:00 pm'
+                    },
+
+                    {
+
+                        h1: 'Register for the --- Workshop!',
+                        contents: 'Some awesome stuff about CEG',
+                        image: '1.jpg',
+                        class: 'item',
+                        month: 'Aug',
+                        date: '01',
+                        fromTime: '10:00 am',
+                        toTime: '12:00 pm'
+                    },
+                    {
+
+                        h1: 'Register for the --- Workshop!',
+                        contents: 'Some awesome stuff about CEG',
+                        image: '1.jpg',
+                        class: 'item',
+                        month: 'Aug',
+                        date: '01',
+                        fromTime: '10:00 am',
+                        toTime: '12:00 pm'
+                    }]
+            },
+
+            {
+
+                class: 'item',
+                updates: [{
+
+                    h1: 'Hep\'s ON!',
+                    contents: 'Some awesome stuff about CEG',
+                    image: '1.jpg',
+                    month: 'Aug',
+                    date: '01',
+                    fromTime: '10:00 am',
+                    toTime: '12:00 pm'
+                },
+
+                    {
+
+                        h1: 'Events UP!',
+                        contents: 'Some awesome stuff about CEG',
+                        image: '1.jpg',
+                        class: 'item',
+                        month: 'Aug',
+                        date: '01',
+                        fromTime: '10:00 am',
+                        toTime: '12:00 pm'
+                    },
+
+                    {
+
+                        h1: 'Register for the --- Workshop!',
+                        contents: 'Some awesome stuff about CEG',
+                        image: '1.jpg',
+                        class: 'item',
+                        month: 'Aug',
+                        date: '01',
+                        fromTime: '10:00 am',
+                        toTime: '12:00 pm'
+                    },
+                    {
+
+                        h1: 'Register for the --- Workshop!',
+                        contents: 'Some awesome stuff about CEG',
+                        image: '1.jpg',
+                        class: 'item',
+                        month: 'Aug',
+                        date: '01',
+                        fromTime: '10:00 am',
+                        toTime: '12:00 pm'
+                    }]
+            }];
+
+     $scope.updates = [
+
+         {
+             class:'item active',
+             updateItems:  [{
+
+                 title: 'Hep\'s ON!',
+                 contents: 'Some awesome stuff about CEG',
+                 image: 'post1.jpg',
+                 date: '01'
+
+             },
+
+                 {
+
+                     title: 'Events UP!',
+                     contents: 'Some awesome stuff about CEG',
+                     image: 'post2.jpg',
+                     date: '01'
+
+                 },
+
+                 {
+
+                     title: 'Register for the --- Workshop!',
+                     contents: 'Some awesome stuff about CEG',
+                     image: 'post3.jpg',
+                     date: '01'
+
+                 },
+                 {
+
+                     title: 'Register for the --- Workshop!',
+                     contents: 'Some awesome stuff about CEG',
+                     image: 'post4.jpg',
+                     date: '01'
+
+                 }]
+
+         },
+
+         {
+             class:'item',
+             updateItems:  [{
+
+                 title: 'Some Other Stuff is ON!',
+                 contents: 'Some awesome stuff about CEG',
+                 image: 'post1.jpg',
+                 date: '01'
+
+             },
+
+                 {
+
+                     title: 'Events UP!',
+                     contents: 'Some awesome stuff about CEG',
+                     image: 'post2.jpg',
+                     date: '01'
+
+                 },
+
+                 {
+
+                     title: 'Register for the --- Workshop!',
+                     contents: 'Some awesome stuff about CEG',
+                     image: 'post3.jpg',
+                     date: '01'
+
+                 },
+                 {
+
+                     title: 'Register for the --- Workshop!',
+                     contents: 'Some awesome stuff about CEG',
+                     image: 'post4.jpg',
+                     date: '01'
+
+                 }]
+
+         },
+         {
+             class:'item',
+             updateItems:  [{
+
+                 title: 'New Updates!',
+                 contents: 'Some awesome stuff about CEG',
+                 image: 'post1.jpg',
+                 date: '01'
+
+             },
+
+                 {
+
+                     title: 'Events UP!',
+                     contents: 'Some awesome stuff about CEG',
+                     image: 'post2.jpg',
+                     date: '01'
+
+                 },
+
+                 {
+
+                     title: 'Register for the --- Workshop!',
+                     contents: 'Some awesome stuff about CEG',
+                     image: 'post3.jpg',
+                     date: '01'
+
+                 },
+                 {
+
+                     title: 'Register for the --- Workshop!',
+                     contents: 'Some awesome stuff about CEG',
+                     image: 'post4.jpg',
+                     date: '01'
+
+                 }]
+
+         }];
+
+
+
+
+//left dates
+
+        $scope.selectActive1 = function(index_){
+            for(var i=0;i<3;i++) {
+                $scope.slideIndex1[i].status='';
+                $scope.carousel1[i].class='item';
+
+            }
+            $scope.slideIndex1[index_].status='active';
+            $scope.carousel1[index_].class='item active';
+             console.log(index_+" active?"+$scope.slideIndex1[index_].status)
+        };
+
+//right updates
+
+        $scope.selectActive = function(index_){
+            for(var i=0;i<3;i++) {
+                $scope.slideIndex1[i].status='';
+                $scope.carousel1[i].class='item';
+
+            }
+            $scope.slideIndex1[index_].status='active';
+            $scope.carousel1[index_].class='item active';
+            console.log(index_+" active?"+$scope.slideIndex1[index_].status)
+        };
+
+
+
+
+    }).controller('sponsorsController',function($scope,$routeParams,getService,$rootScope){
+
+        $scope.slideIndex = [{
+            index: '0',
+            status: 'active'
+        },
+            {
+                index: '1',
+                status: ''
+            },
+
+            {
+                index: '2',
+                status: ''
+            } ];
+
+        $scope.sponsors = [
+            {
+                class:'item active',
+                images:['1.png','2.png','3.png','4.png','5.png','6.png']
+            },
+            {
+                class:'item',
+                images:['1.png','2.png','3.png','4.png','5.png','6.png']
+
+            },
+
+            {
+                class:'item',
+                images:['1.png','2.png','3.png','4.png','5.png','6.png']
+            }
+        ];
+
+
+        $scope.selectActive = function(index_){
+            for(var i=0;i<3;i++) {
+                $scope.slideIndex[i].status='';
+                $scope.carousel[i].class='item';
+
+            }
+            $scope.slideIndex[index_].status='active';
+            $scope.carousel[index_].class='item active';
+            console.log(index_+" active?"+$scope.slideIndex[index_].status)
+        };
+
+        $scope.gallery = [
+
+            {
+                id:'10.jpg',
+                linker:'sponsor_linker',
+                name:'Microsoft'
+
+            },
+            {
+                id:'10.jpg',
+                linker:'sponsor_linker',
+                name:'Microsoft'
+
+            },
+            {
+                id:'10.jpg',
+                linker:'sponsor_linker',
+                name:'Microsoft'
+
+            },
+            {
+                id:'10.jpg',
+                linker:'sponsor_linker',
+                name:'Microsoft'
+
+            },
+            {
+                id:'10.jpg',
+                linker:'sponsor_linker',
+                name:'Microsoft'
+
+            },
+            {
+                id:'10.jpg',
+                linker:'sponsor_linker',
+                name:'Microsoft'
+
+            },
+            {
+                id:'10.jpg',
+                linker:'sponsor_linker',
+                name:'Microsoft'
+
+            }
+        ];
+
+
+
+
+    }).controller('contactsController',function($scope,$routeParams,getService,$rootScope){
+
+        $scope.slideIndex = [{
+            index: '0',
+            status: 'active'
+        },
+            {
+                index: '1',
+                status: ''
+            },
+
+            {
+                index: '2',
+                status: ''
+            } ];
+
+        $scope.selectActive = function(index_){
+            for(var i=0;i<3;i++) {
+                $scope.slideIndex[i].status='';
+                $scope.carousel[i].class='item';
+
+            }
+            $scope.slideIndex[index_].status='active';
+            $scope.carousel[index_].class='item active';
+            console.log(index_+" active?"+$scope.slideIndex[index_].status)
+        };
+
+        $scope.contacts = [
+            {
+                class:'item active',
+                contactItem:[
+                    {
+                        image:'member1.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image:'member2.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+                    {
+                        image:'member3.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image: 'member4.jpg',
+                        name: 'Random Person',
+                        role: 'Random Role',
+                        phone: '+91 9739374522'
+
+                    },
+                    {
+                        image:'member1.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image:'member2.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+                    {
+                        image:'member3.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image: 'member4.jpg',
+                        name: 'Random Person',
+                        role: 'Random Role',
+                        phone: '+91 9739374522'
+
+                    }]
+
+            },
+            {
+                class:'item',
+                contactItem:[
+                    {
+                        image:'member1.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image:'member2.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+                    {
+                        image:'member3.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image: 'member4.jpg',
+                        name: 'Random Person',
+                        role: 'Random Role',
+                        phone: '+91 9739374522'
+
+                    },
+                    {
+                        image:'member1.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image:'member2.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+                    {
+                        image:'member3.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image: 'member4.jpg',
+                        name: 'Random Person',
+                        role: 'Random Role',
+                        phone: '+91 9739374522'
+
+                    }]
+
+            },
+            {
+                class:'item',
+                contactItem:[
+                    {
+                        image:'member1.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image:'member2.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+                    {
+                        image:'member3.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image: 'member4.jpg',
+                        name: 'Random Person',
+                        role: 'Random Role',
+                        phone: '+91 9739374522'
+
+                    }]
+
+            },
+            {
+                class:'item',
+                contactItem:[
+                    {
+                        image:'member1.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image:'member2.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+                    {
+                        image:'member3.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image: 'member4.jpg',
+                        name: 'Random Person',
+                        role: 'Random Role',
+                        phone: '+91 9739374522'
+
+                    },
+                    {
+                        image:'member1.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image:'member2.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+                    {
+                        image:'member3.jpg',
+                        name:'Random Person',
+                        role:'Random Role',
+                        phone:'+91 9739374522'
+
+                    },
+
+                    {
+                        image: 'member4.jpg',
+                        name: 'Random Person',
+                        role: 'Random Role',
+                        phone: '+91 9739374522'
+
+                    }]
+
+            }        ];
+
+
+    })

@@ -1,0 +1,43 @@
+<style>
+img{
+width:95%;
+height:90%;
+}
+.view{
+box-shadow:3px 4px 5px rgba(0,0,0,0.4);
+margin-right:30px;
+
+}
+.main{
+margin-top:-10%;
+}
+p.descr{
+}
+.view:hover{
+transform:scale(1.3);
+z-index:9999;
+}
+.view h3{
+font-size:1.1em;
+color:rgb(190,0,0);
+padding:3px;
+text-shadow:1px 3px 4px gold;
+}
+</style>
+
+<div class="col-md-8 col-md-push-2" ng-controller="linksController">
+            <div class="main">
+                <!-- FIFTH EXAMPLE -->
+                <div class="view view-fifth" ng-repeat="club in clubs">
+                    <img src="images/clubs/{{club.img}}" />
+                    <div class="mask">
+                        <h2>{{club.name}}</h2>
+                        <p ng-bind-html="club.description" style="font-size:0.2em"></p>
+						<h3>{{club.president_name}}</h3>
+						<p><span>{{club.phone}}</span></p>
+						<p><i class="fa fa-email"></i>
+						<span>{{club.email}}</span></p>
+                    </div>
+                </div>
+                </div>
+			</div>

@@ -1,0 +1,26 @@
+@-webkit-keyframes drawBorder{
+	0%{border:none;}
+	20%{ border-top:2px solid black;}
+	40%{ border-right:2px solid black;}
+	60%{ border-bottom:2px solid black;}
+	80%{  border-left:2px solid black;}
+	100%{ border:2px solid black;}
+}
+
+@-moz-keyframes drawBorder{
+	0%{border:none;}
+	20%{ border-top:2px solid black;}
+	40%{ border-right:2px solid black;}
+	60%{ border-bottom:2px solid black;}
+	80%{  border-left:2px solid black;}
+	100%{ border:2px solid black;}
+}
+
+keyframes drawBorder{
+	0%{border:none;}
+	20%{ border-top:2px solid black;}
+	40%{ border-right:2px solid black;}
+	60%{ border-bottom:2px solid black;}
+	80%{  border-left:2px solid black;}
+	100%{ border:2px solid black;}
+}

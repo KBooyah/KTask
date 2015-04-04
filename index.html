@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+    <title>CEG Website</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+     <link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css" />
+     <link rel="stylesheet" href="plugins/flexslider/flexslider.css">
+     <link rel="stylesheet" href="plugins/pretty-photo/css/prettyPhoto.css/"> 
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="css/styles.css">
+      <link id="theme-style" rel="stylesheet" href="css/animatedStyles.css">
+    
+   <link href='http://fonts.googleapis.com/css?family=Crushed|Kelly+Slab|Graduate' rel='stylesheet' type='text/css'>
+<!--about circle-->
+     <link rel="stylesheet" href="css/about/normalize.css"> 
+     <link rel="stylesheet" href="css/about/demo.css"> 
+     <link rel="stylesheet" href="css/about/common.css"> 
+     <link rel="stylesheet" href="css/about/style6.css"> 
+
+        <link rel="stylesheet" type="text/css" href="css/hover/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/hover/style_common.css" />
+        <link rel="stylesheet" type="text/css" href="css/hover/style5.css" />
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-24707561-9', '3rdwavemedia.com');
+      ga('send', 'pageview');
+    
+    </script>
+</head> 
+<style>
+.ch-img-1{
+
+    background-image: url(images/ceg.jpg);
+background-size:cover;
+background-repeat:no-repeat;
+}
+
+</style>
+
+
+
+
+<body class="home-page" ng-app="myApp">
+        <!-- ******HEADER****** --> 
+
+<div class="row" >
+    <div class="col-md-12">
+<div ng-include="'partials/header.html'"></div>
+</div>
+</div>
+        
+        <!-- ******NAV****** -->
+<div class="row">
+<div class="col-md-10" >
+<div ng-include="'partials/navbar.html'"></div>
+    </div>    
+        <!-- ******CONTENT****** --> 
+<br><br><br><br><br><br><br><br><br><br><br><br>       
+
+
+<div class="row-fluid">
+    <div ng-view></div>
+</div>
+
+
+<div class="row">
+<div class="col-md-12">
+
+<div ng-include="'partials/quicklinks.html'"></div>
+
+</div>
+</div>
+
+
+
+    <!-- ******FOOTER****** --> 
+        
+            
+
+            </div><!--//configure-panel-->
+        </div><!--//config-wrapper-inner-->
+    </div><!--//config-wrapper-->
+<div ng-include="'partials/footer.html'"></div>
+        
+
+ 
+    <!-- Javascript -->          
+    <script type="text/javascript" src="plugins/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="plugins/bootstrap-hover-dropdown.min.js"></script> 
+    <script type="text/javascript" src="plugins/back-to-top.js"></script>
+    <script type="text/javascript" src="plugins/jquery-placeholder/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="plugins/pretty-photo/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="plugins/flexslider/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="plugins/jflickrfeed/jflickrfeed.min.js"></script> 
+    <script type="text/javascript" src="js/main.js"></script>            
+     <script type="text/javascript" src="js/angular/angular.min.js"></script>
+
+    <script type="text/javascript" src="js/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="js/angular-sanitize/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="appjs/app.js"></script>
+    <script type="text/javascript" src="appjs/controller.js"></script>
+    <script type="text/javascript" src="appjs/services.js"></script>
+    <script type="text/javascript" src="appjs/directives.js"></script>
+        <script type="text/javascript" src="js/about/modernizr.custom.79639.js"></script>
+
+<script>
+ $(window).scroll(function() {
+        if($(window).scrollTop() > 0) {
+            $(".main-nav .nav-item").addClass("whiteBg");
+        } else {
+
+            $(".main-nav .nav-item").removeClass("whiteBg");
+        }
+    });
+
+</script>
+
+
+</body>
+</html> 
+

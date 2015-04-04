@@ -1,0 +1,27 @@
+/**
+ * Created by indrapradap on 18/09/14.
+ */
+
+var app = angular.module('KTask',['myAppcontrollers','myAppServices','myAppDirectives','ngRoute']);
+
+    app.config(['$routeProvider', function($routeProvider) {
+
+    }]);
+
+
+app.run(function ($location,getService) {
+/*    if (getService.checkCookie("k_id_dup")) {
+        //appAuth.saveAttemptUrl();
+        var id = getService.getCookie("k_id_dup");
+        getService.checkProfile(id).success(function(data){
+
+            if(data.toString() == "true"){
+                console.log(ret);
+            }
+            else{
+                $location.path('/profile');
+            }
+        })
+    }*/
+
+});

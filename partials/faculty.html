@@ -1,0 +1,104 @@
+<style>
+a.dep{
+color:rgb(24,24,24);
+text-decoration:none;
+padding:6px;
+margin:15px;
+font-weight:bold;
+-webkit-transition:all 0.2s;
+-moz-transition:all 0.2s;
+transition:all 0.2s;
+}
+a.dep:hover{
+color:rgb(190,0,0);
+cursor:pointer;
+}
+li{
+list-style:none;
+margin-bottom:20px;
+}
+.deplist{
+font-size:1.3em;
+display:block;
+float:left;
+}
+.faculty h1{
+margin-left:5%;
+margin-top:-7%;
+font-size:4em !important;
+color:rgb(185,0,10) !important;
+text-shadow:2px 2px 2px rgba(0,0,0,0.4);
+}
+i.fa{
+opacity:1;
+color:black;
+-webkit-transition:all 0.2s;
+-moz-transition:all 0.2s;
+transition:all 0.2s;
+}
+li:hover i.fa{
+color:rgb(190,0,0);
+}
+.fTable{
+font-size:1.2em;
+color:black;
+border:2px solid rgba(0,0,0,0.4);
+box-shadow:3px 4px 7px rgba(0,0,0,0.3);
+}
+th{
+color:rgb(190,0,0);
+font-size:1.5em;
+text-align:center;
+border-bottom:2px solid rgba(0,0,0,0.4);
+border-right:2px solid rgba(0,0,0,0.4);
+}
+
+tr{
+margin:5px;
+height:40px;
+}
+tr.stuff:hover{
+background:rgba(190,0,0,0.05);
+}
+td{
+width:33%;
+font-size:1.2em;
+border-right:2px solid rgba(0,0,0,0.4);
+border-bottom:2px solid rgba(0,0,0,0.4);
+padding:10px;
+text-align:center;
+}
+td#name:hover{
+cursor:pointer;
+}
+
+</style>
+
+<div ng-controller="deptsController" class="faculty">
+<h1>FACULTY</h1>
+<div class="col-md-5">
+<div class="deplist">
+<ul>
+<li ng-repeat="dept in depts">
+<i class="fa fa-caret-right"></i><a class="dep" ng-click="getfac(dept.name)">{{dept.name}}</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="col-md-7">
+<div class="faclist">
+<table class="fTable" style="visibility:{{alive}}">
+<h1 style="font-size:2.2em !important; text-align:left">{{title}}</h1>
+<tr>
+<th>{{n}}</th>
+<th>{{d}}</th>
+<th>{{e}}</th>
+</tr>
+<tr class="stuff" ng-repeat="fac in facs">
+<td id="name" ng-bind-html="fac.name"></td>
+<td ng-bind-html="fac.designation"></td>
+<td ng-bind-html="fac.email"></td>
+</tr>
+</table>
+</div>

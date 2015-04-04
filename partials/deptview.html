@@ -1,0 +1,44 @@
+<style>
+
+section.about{
+margin-top:-3%;
+background:none;
+color:black;
+font-weight:bold;
+text-align:justify;
+
+}
+.about h1{
+text-align:center;
+color:rgb(185,0,0);
+font-size:4em;
+text-shadow:1px 3px 3px rgba(0,0,0,0.3);
+}
+.about h3{
+margin-left:10px;
+font-size:1.5em;
+}
+
+.contact h3{
+margin-top:10px;
+font-size:1.2em !important;
+color:rgb(185,0,0);
+}
+.contact{
+
+padding:5px;
+background:rgba(100,24,24,0.08);
+box-shadow:3px 3px 4px rgba(0,0,0,0.3);
+}
+</style>
+<div class="col-md-12" ng-controller="deptsController">
+<section class="about">
+<h1>{{depname}}</h1>
+<h3>{{about}}</h3>
+<div class="contact">
+<h3>CONTACT: {{cname}}</h3>
+<h3>EMAIL: {{cmail}}</h3>
+<h3>PHONE: {{cno}}</h3>
+</div>
+</section>
+</div>

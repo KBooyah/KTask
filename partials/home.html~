@@ -1,0 +1,91 @@
+<!--SLIDER-->
+	<style>
+
+	</style>
+    <div class="col-md-8"  style="background:none">
+        <div class="content container">
+            <div id="promo-slider" class="slider flexslider">
+                <ul class="slides">
+    
+               <li>
+                        <img src="images/slides/slide-1.jpg"  alt="" />
+                        <p class="flex-caption">
+                        </p>
+                    </li>
+                    <li>
+                        <img src="images/slides/slide-2.jpg"  alt="" />
+                        <p class="flex-caption">
+                        </p>
+                    </li>
+                    <li>
+                        <img src="images/slides/slide-3.jpg"  alt="" />
+                        <p class="flex-caption">
+                        </p>
+                    </li>
+                    <li>
+                        <img src="images/slides/slide-4.jpg"  alt="" />
+                        <p class="flex-caption">
+                        </p>
+                    </li>
+                     </ul><!--//slides-->
+            </div><!--//flexslider-->
+      </div>
+
+</div>
+
+<div class="col-md-4 col-md-push-1">
+    <!--about-->
+             
+                <ul class="ch-grid" style="margin-top:-5%">
+                    <li>
+                        <div class="ch-item ch-img-1">              
+                            <div class="ch-info-wrap">
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-1"></div>
+                                    <div class="ch-info-back">
+                                        <h3>CEG</h3>
+                                        <p>Founded in 1794<a href="#/about">DISCOVER CEG</a></p>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+            </ul>
+     </div>
+
+
+
+
+<!--news-->
+
+<div class="row" style="background:white">
+    <div class="col-md-12">
+<div ng-include="'partials/news.html'" style="
+    background:rgba(0,200,100,1);"></div>
+</div>
+</div>
+
+<div class="row" style="background:white">
+<div class="col-md-3">
+<div ng-include="'partials/events.html'"></div>
+</div><!--//col-md-3-->
+
+
+                <div class="col-md-3 col-md-push-6">
+
+<div ng-include="'partials/quicklinks.html'"></div>
+                    
+                                 </div>
+
+
+                <div class="col-md-4 col-md-pull-2">
+                    
+
+<div ng-include="'partials/alumni.html'"></div>
+                                    </div><!--//col-md-3-->
+            </div><!--//cols-wrapper-->
+            
+    </div><!--//wrapper-->
+    
+</div>
+

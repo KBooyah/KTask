@@ -1,0 +1,75 @@
+<style>
+
+.cTable{
+font-size:1.2em;
+color:black;
+border:2px solid rgba(0,0,0,0.4);
+  overflow-y:auto;
+}
+th{
+color:rgb(190,0,0);
+font-size:1.5em;
+text-align:center;
+border-bottom:2px solid rgba(0,0,0,0.4);
+border-right:2px solid rgba(0,0,0,0.4);
+}
+
+tr{
+margin:5px;
+height:40px;
+box-shadow:5px 4px 10px rgba(0,0,0,0.2);
+}
+tr:hover{
+background:rgba(190,0,0,0.05);
+}
+td{
+width:33%;
+font-size:1.2em;
+border:2px solid rgba(0,0,0,0.4);
+border-bottom:2px solid rgba(0,0,0,0.4);
+padding:10px;
+text-align:center;
+}
+
+td p{
+font-size:1.2em;
+
+text-align:center;
+
+}
+.catg{
+color:rgb(190,0,0);
+text-align:center;
+font-size:3em;
+text-shadow:3px 3px 2px rgba(0,0,0,0.4);
+}
+</style>
+
+<div ng-controller="coursesController" style="margin-top:-5%;">
+
+<div class="col-md-4 col-md-push-1">
+<table class="ctable"
+style="margin-bottom:100px;
+box-shadow:5px 4px 5px rgba(0,0,0,0.2),
+-5px 4px 5px rgba(0,0,0,0.2);
+">
+<h1 class="catg">UG COURSES</h1>
+<tr ng-repeat="course in ug">
+<td ng-bind-html="course.name"></td>
+</tr>
+</table>
+</div>
+
+<div class="col-md-4 col-md-push-3">
+<table class="ctable"
+style=" margin-bottom:100px;
+box-shadow:5px 4px 5px rgba(0,0,0,0.2),
+-5px 4px 5px rgba(0,0,0,0.2);
+">
+<h1 class="catg">PG COURSES</h1>
+<tr ng-repeat="course in pg">
+<td ng-bind-html="course.name"></td>
+</tr>
+</table>
+</div>
+</div>
